@@ -30,6 +30,7 @@
 		81A9FADB219A151B003E6502 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9FADA219A151B003E6502 /* Helpers.swift */; };
 		81A9FADD219A156E003E6502 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9FADC219A156E003E6502 /* Color.swift */; };
 		81F935042476B0E000CD75D8 /* Tortoise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F935032476B0E000CD75D8 /* Tortoise.swift */; };
+		9090D8EE2539D3D900E2668E /* MovingSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9090D8ED2539D3D900E2668E /* MovingSquare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		81DBFC2322E96442005EDE85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81DBFC2422E96442005EDE85 /* .tgz */ = {isa = PBXFileReference; lastKnownFileType = text; path = .tgz; sourceTree = "<group>"; };
 		81F935032476B0E000CD75D8 /* Tortoise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tortoise.swift; sourceTree = "<group>"; };
+		9090D8ED2539D3D900E2668E /* MovingSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingSquare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				814ADAFA248EB45F00F80486 /* AudioInputSketch.swift */,
 				814ADAFE248EB5E300F80486 /* StaticSketch.swift */,
 				814ADAFC248EB56900F80486 /* EmptySketch.swift */,
+				9090D8ED2539D3D900E2668E /* MovingSquare.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				81064A1C1C132DA2007ED524 /* Sketch.swift in Sources */,
 				81064A0A1C130A10007ED524 /* AppDelegate.swift in Sources */,
 				814ADAF5248EAB6A00F80486 /* TurtleSketch.swift in Sources */,
+				9090D8EE2539D3D900E2668E /* MovingSquare.swift in Sources */,
 				814ADAF9248EB34900F80486 /* BasicSketch.swift in Sources */,
 				814ADAFB248EB45F00F80486 /* AudioInputSketch.swift in Sources */,
 				814ADAF1248E9F8200F80486 /* AudioAnalyser.swift in Sources */,

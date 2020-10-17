@@ -27,13 +27,17 @@ class BasicSketch: NSObject, Sketchable {
         // Set starting position
         x = 250
         
+       //slow down the animation
+        canvas.framesPerSecond = 10
+        
+        
     }
     
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
         
         // Change position
-        x += 1
+        x -= 0
         
         // Draw an ellipse in the middle of the canvas
         canvas.drawEllipse(at: Point(x: x, y: 250), width: 50, height: 50)
