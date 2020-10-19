@@ -17,7 +17,8 @@ class MovingSquare: NSObject, Sketchable {
     var canvas: Canvas
     
         // Vertical position
-    var y = 250
+    var x = 250
+    var x2 = 250
     
     // This function runs once
     override init() {
@@ -31,28 +32,42 @@ class MovingSquare: NSObject, Sketchable {
     func draw() {
         
         // Change the verticle position
-        y -= 1
-        
-        // set color
-        canvas.fillColor = Color(hue: 200, saturation: 100, brightness: 100, alpha: 100)
-        
-        // draw a square in the middle of the canvas
-        canvas.drawRectangle(at: Point(x: 250, y: y), width: 50, height: 50, anchoredBy: .centre)
-        
-        // set color
-        canvas.fillColor = Color(hue: 0, saturation: 100, brightness: 100, alpha: 100)
-
-        
-        // draw a square in the left of the canvas
-        canvas.drawRectangle(at: Point(x: 200, y: y), width: 50, height: 50, anchoredBy: .centre)
+        x += 1
+        x2 -= 1
         
         // set color
         canvas.fillColor = Color(hue: 150, saturation: 100, brightness: 100, alpha: 100)
         
-        // draw a square in the right of the canvas
-        canvas.drawRectangle(at: Point(x: 300, y: y), width: 50, height: 50, anchoredBy: .centre)
+        // draw a square in the middle of the canvas
+        canvas.drawRectangle(at: Point(x: x, y: 450), width: 50, height: 50, anchoredBy: .centre)
+        
+        
+        // set color
+        canvas.fillColor = Color(hue: 0, saturation: 100, brightness: 100, alpha: 100)
 
-        print("The y position is: \(y)")
+        // draw a square in the left of the canvas
+        canvas.drawRectangle(at: Point(x: x2, y: 350), width: 50, height: 50, anchoredBy: .centre)
+        
+        
+        // set color
+        canvas.fillColor = Color(hue: 250, saturation: 100, brightness: 100, alpha: 100)
+        
+        // draw a square in the right of the canvas
+        canvas.drawRectangle(at: Point(x: x, y: 250), width: 50, height: 50, anchoredBy: .centre)
+        
+        // set color
+        canvas.fillColor = Color(hue: 80, saturation: 100, brightness: 100, alpha: 100)
+        
+        // draw a square in the middle of the canvas
+        canvas.drawRectangle(at: Point(x: x2, y: 150), width: 50, height: 50, anchoredBy: .centre)
+        
+        // set color
+        canvas.fillColor = Color(hue: 180, saturation: 100, brightness: 100, alpha: 100)
+        
+        // draw a square in the middle of the canvas
+        canvas.drawRectangle(at: Point(x: x, y: 50), width: 50, height: 50, anchoredBy: .centre)
+        
+        print("The y position is: \(x)")
         
     }
     
