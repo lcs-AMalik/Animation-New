@@ -14,8 +14,8 @@ class Sketch: NSObject {
     // 1. Comment out the code on line 11.
     // 2. Uncomment one of the lines below.
 //    var currentDrawing = TurtleSketch()
-//    var currentDrawing = AudioInputSketch()
+  //  var currentDrawing = AudioInputSketch()
 //    var currentDrawing = StaticSketch()
-  var currentDrawing = MovingSquare()
-   // var currentDrawing = SketchTwo()
+ // var currentDrawing = MovingSquare()
+  var currentDrawing = FourCorners()
 }
