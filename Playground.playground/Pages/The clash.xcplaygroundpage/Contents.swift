@@ -48,33 +48,148 @@ PlaygroundPage.current.liveView = canvas
 let orange = Color(hue: 21, saturation: 76, brightness: 94, alpha: 100)
 let blue = Color(hue: 201, saturation: 72, brightness: 85, alpha: 65)
 let offWhite = Color(hue: 208, saturation: 1, brightness: 88, alpha: 100)
+let black = Color(hue: 0, saturation: 100, brightness: 0, alpha: 100)
+let deepRed = Color(hue: 5, saturation: 85, brightness: 94, alpha: 100)
 
 // turn off boarders
 canvas.drawShapesWithBorders = false
 
 // black background
-canvas.fillColor = Color.orange
-canvas.borderColor = Color.orange
+canvas.fillColor = deepRed
+canvas.borderColor = deepRed
 
 // Draw background
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 // Draw text
-canvas.textColor = black
+canvas.textColor = Color.black
 
-canvas.drawText(message: "the clash", at: Point(x: 15, y: 110), size: 30, kerning: 0 )
+canvas.drawText(message: "the clash", at: Point(x: 15, y: 450), size: 30, kerning: 0 )
 
-canvas.drawText(message: "with the brattles", at: Point(x: 10, y: 40), size: 10, kerning: 0 )
+canvas.drawText(message: "with the brattles", at: Point(x: 15, y: 580), size: 10, kerning: 0 )
 
-canvas.drawText(message: "and dead kennedys", at: Point(x: 10, y: 25), size: 10, kerning: 0 )
+canvas.drawText(message: "and dead kennedys", at: Point(x: 15, y: 565), size: 10, kerning: 0 )
 
-canvas.drawText(message: "matinee and eve", at: Point(x: 110, y: 40), size: 10, kerning: 0 )
+canvas.drawText(message: "matinee and eve", at: Point(x: 115, y: 580), size: 10, kerning: 0 )
 
-canvas.drawText(message: "saturday / june 13 1981", at: Point(x: 110, y: 25), size: 10, kerning: 0 )
+canvas.drawText(message: "saturday / june 13 1981", at: Point(x: 115, y: 565), size: 10, kerning: 0 )
 
-canvas.drawText(message: "bonds international casino", at: Point(x: 250, y: 40), size: 10, kerning: 0 )
+canvas.drawText(message: "bonds international casino", at: Point(x: 250, y: 580), size: 10, kerning: 0 )
 
-canvas.drawText(message: "in times square, new york city", at: Point(x: 250, y: 25), size: 10, kerning: 0 )
+canvas.drawText(message: "in times square, new york city", at: Point(x: 250, y: 565), size: 10, kerning: 0 )
+
+
+//Draw custom shape color
+canvas.fillColor = offWhite
+
+// Draw vertices
+var vertices: [Point] = []
+vertices.append(Point(x: 50, y: 0))
+vertices.append(Point(x: 100, y: 50))
+vertices.append(Point(x: 50, y: 100))
+vertices.append(Point(x: 0, y: 50))
+vertices.append(Point(x: 50, y: 0))
+canvas.drawCustomShape(with: vertices)
+
+//Draw circle color
+canvas.fillColor = deepRed
+//Draw circle
+canvas.drawEllipse(at: Point(x: 50, y: 50), width: 62, height: 62)
+
+//Draw circle color
+canvas.fillColor = Color(hue: 160, saturation: 100, brightness: 80, alpha: 60)
+
+//Draw circle
+canvas.drawEllipse(at: Point(x: 75, y: 25), width: 62, height: 62)
+
+//Draw circle color
+canvas.fillColor = Color(hue: 5, saturation: 5, brightness: 100, alpha: 15)
+//Draw circle
+canvas.drawEllipse(at: Point(x: 125, y: -15), width: 62, height: 62)
+
+
+
+
+
+
+
+
+
+ // Draw a bunch of circle things
+
+for y in stride(from: 0,
+
+                to: 400,
+
+                by: 100) {
+
+
+    for x in stride(from: 0,
+
+                    to: 400,
+
+                    by: 100) {
+
+        // code in this block is repeated 4 * 4 = 16
+
+        x
+
+        //Draw custom shape color
+        canvas.fillColor = offWhite
+
+        // Draw vertices
+        var vertices: [Point] = []
+        vertices.append(Point(x: x, y: y))
+        vertices.append(Point(x: x + 50, y: y + 0))
+        vertices.append(Point(x: x + 100, y: y + 50))
+        vertices.append(Point(x: x + 50, y: y + 100))
+        vertices.append(Point(x: x + 0, y: y + 50))
+        vertices.append(Point(x: x + 50, y: y + 0))
+        canvas.drawCustomShape(with: vertices)
+
+        //Draw circle color
+        canvas.fillColor = deepRed
+        //Draw circle
+        canvas.drawEllipse(at: Point(x: 50, y: 50), width: 62, height: 62)
+
+        //Draw circle color
+        canvas.fillColor = Color(hue: 160, saturation: 100, brightness: 80, alpha: 60)
+
+        //Draw circle
+        canvas.drawEllipse(at: Point(x: 75, y: 25), width: 62, height: 62)
+
+        //Draw circle color
+        canvas.fillColor = Color(hue: 5, saturation: 5, brightness: 100, alpha: 15)
+        //Draw circle
+        canvas.drawEllipse(at: Point(x: 125, y: -15), width: 62, height: 62)
+
+
+
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*:
