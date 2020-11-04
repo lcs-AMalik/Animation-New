@@ -71,6 +71,20 @@ canvas.drawText(message: "OCTOBER'S VERY OWN", at: Point(x: 15, y: 565), size: 1
 canvas.drawText(message: "O", at: Point(x: 175, y: 500), size: 50, kerning: 0 )
 canvas.drawText(message: "V", at: Point(x: 215, y: 485), size: 50, kerning: 0 )
 canvas.drawText(message: "O", at: Point(x: 250, y: 500), size: 50, kerning: 0 )
+canvas.drawText(message: "OCTOBER'S VERY OWN", at: Point(x: 15, y: 250), size: 40, kerning: 0 )
+canvas.drawText(message: "O", at: Point(x: 150, y: 300), size: 30, kerning: 0 )
+canvas.drawText(message: "O", at: Point(x: 350, y: 150), size: 30, kerning: 0 )
+canvas.drawText(message: "O", at: Point(x: 250, y: 20), size: 30, kerning: 0 )
+canvas.drawText(message: "O", at: Point(x: 400, y: 500), size: 30, kerning: 0 )
+canvas.drawText(message: "O", at: Point(x: 25, y: 470), size: 30, kerning: 0 )
+canvas.drawText(message: "O", at: Point(x: 370, y: 570), size: 30, kerning: 0 )
+canvas.drawText(message: "O", at: Point(x: 150, y: 175), size: 30, kerning: 0 )
+canvas.drawText(message: "O", at: Point(x: 225, y: 140), size: 30, kerning: 0 )
+canvas.drawText(message: "V", at: Point(x: 310, y: 360), size: 30, kerning: 0 )
+canvas.drawText(message: "V", at: Point(x: 350, y: 450), size: 30, kerning: 0 )
+canvas.drawText(message: "V", at: Point(x: 60, y: 400), size: 30, kerning: 0 )
+canvas.drawText(message: "V", at: Point(x: 65, y: 125), size: 30, kerning: 0 )
+canvas.drawText(message: "V", at: Point(x: 350, y: 75), size: 30, kerning: 0 )
 
 
 //Draw line
