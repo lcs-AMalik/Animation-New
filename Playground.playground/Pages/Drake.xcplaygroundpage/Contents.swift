@@ -78,22 +78,99 @@ canvas.lineColor = gold
 canvas.drawLine(from: Point(x: 0, y: 505), to: Point(x: 210, y: 505), capStyle: .round)
 canvas.drawLine(from: Point(x: 250, y: 505), to: Point(x: 400, y: 505), capStyle: .round)
 
+//OWL LINE THICKNESS
+canvas.defaultLineWidth = 4
+
 //Drawing owl
-canvas.drawLine(from: Point(x: 200, y: 325), to: Point(x: 260, y: 325), capStyle: .round)
-canvas.drawLine(from: Point(x: 215, y: 325), to: Point(x: 220, y: 340), capStyle: .round)
-canvas.drawLine(from: Point(x: 245, y: 325), to: Point(x: 247, y: 340), capStyle: .round)
+canvas.drawLine(from: Point(x: 180, y: 325), to: Point(x: 260, y: 325))
+canvas.drawLine(from: Point(x: 215, y: 325), to: Point(x: 220, y: 340))
+canvas.drawLine(from: Point(x: 245, y: 325), to: Point(x: 247, y: 340))
+
+canvas.drawLine(from: Point(x: 212, y: 344), to: Point(x: 228, y: 341))
+canvas.drawLine(from: Point(x: 240, y: 342), to: Point(x: 255, y: 342))
+
+canvas.drawLine(from: Point(x: 212, y: 344), to: Point(x: 215, y: 365))
+canvas.drawLine(from: Point(x: 228, y: 341), to: Point(x: 235, y: 360))
+canvas.drawLine(from: Point(x: 240, y: 342), to: Point(x: 235, y: 360))
+canvas.drawLine(from: Point(x: 255, y: 355), to: Point(x: 255, y: 342))
 
 
+// draw stumy and face curve
+canvas.drawCurve(from: Point(x: 235, y: 360),
+                 to: Point(x: 160, y: 490),
+                 control1: Point(x: 170, y: 375),
+                 control2: Point(x: 150, y: 455),
+                 showControlPoints: false, capStyle: .round)
+
+canvas.drawCurve(from: Point(x: 158, y: 460),
+                 to: Point(x: 222, y: 490),
+                 control1: Point(x: 160, y: 420),
+                 control2: Point(x: 250, y: 425),
+                 showControlPoints: false, capStyle: .round)
+
+//Draw line
+canvas.drawLine(from: Point(x: 160, y: 490), to: Point(x: 170, y: 480))
+canvas.drawLine(from: Point(x: 222, y: 490), to: Point(x: 213, y: 480))
+
+//Draw head and bottom right curve
+
+canvas.drawCurve(from: Point(x: 170, y: 480),
+                 to: Point(x: 213, y: 480),
+                 control1: Point(x: 180, y: 489),
+                 control2: Point(x: 200, y: 489),
+                 showControlPoints: false, capStyle: .round)
+
+canvas.drawCurve(from: Point(x: 255, y: 355),
+                 to: Point(x: 290, y: 334),
+                 control1: Point(x: 275, y: 335),
+                 control2: Point(x: 270, y: 330),
+                 showControlPoints: false, capStyle: .round)
+
+//Draw line from bottom right to wing
+canvas.drawLine(from: Point(x: 290, y: 334), to: Point(x: 285, y: 345))
+
+// Draw  wing curve
+
+canvas.drawCurve(from: Point(x: 223, y: 450),
+                 to: Point(x: 300, y: 336),
+                 control1: Point(x: 205, y: 400),
+                 control2: Point(x: 205, y: 405),
+                 showControlPoints: false, capStyle: .round)
+
+canvas.drawCurve(from: Point(x: 223, y: 450),
+                 to: Point(x: 300, y: 336),
+                 control1: Point(x: 272, y: 410),
+                 control2: Point(x: 272, y: 415),
+                 showControlPoints: false, capStyle: .round)
 
 
+//OWL LINE FACE THICKNESS
+canvas.defaultLineWidth = 4
 
+// Draw face
+canvas.drawLine(from: Point(x: 192, y: 445), to: Point(x: 182, y: 470))
+canvas.drawLine(from: Point(x: 192, y: 445), to: Point(x: 202, y: 470))
 
+//Fill in color foe eyes
+canvas.fillColor = gold
 
+// Draw 1st layer eyes using circles
+canvas.drawEllipse(at: Point(x: 176, y: 465), width: 18, height: 18)
+canvas.drawEllipse(at: Point(x: 208, y: 465), width: 18, height: 18)
 
+//Fill in color foe eyes
+canvas.fillColor = Color.black
 
+// Draw 2nd layer eyes using circles
+canvas.drawEllipse(at: Point(x: 176, y: 465), width: 12, height: 12)
+canvas.drawEllipse(at: Point(x: 208, y: 465), width: 12, height: 12)
 
+//Fill in color foe eyes
+canvas.fillColor = gold
 
-
+// Draw 3rd layer eyes using circles
+canvas.drawEllipse(at: Point(x: 176, y: 465), width: 9, height: 9)
+canvas.drawEllipse(at: Point(x: 208, y: 465), width: 9, height: 9)
 
 
 
