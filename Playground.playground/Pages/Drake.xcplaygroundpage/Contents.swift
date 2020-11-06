@@ -31,9 +31,10 @@ let preferredHeight = 600
 import Cocoa
 import PlaygroundSupport
 import CanvasGraphics
+let canvas = Canvas(width: preferredWidth, height: preferredHeight, quality: .Ultra)
 
 // Create canvas
-let canvas = Canvas(width: preferredWidth, height: preferredHeight)
+//let canvas = Canvas(width: preferredWidth, height: preferredHeight)
 
 // Show the canvas in the playground's live view
 PlaygroundPage.current.liveView = canvas
@@ -96,17 +97,17 @@ canvas.drawLine(from: Point(x: 250, y: 505), to: Point(x: 400, y: 505), capStyle
 canvas.defaultLineWidth = 4
 
 //Drawing owl
-canvas.drawLine(from: Point(x: 180, y: 325), to: Point(x: 260, y: 325))
-canvas.drawLine(from: Point(x: 215, y: 325), to: Point(x: 220, y: 340))
-canvas.drawLine(from: Point(x: 245, y: 325), to: Point(x: 247, y: 340))
+canvas.drawLine(from: Point(x: 180, y: 325), to: Point(x: 260, y: 325), capStyle: .round)
+canvas.drawLine(from: Point(x: 215, y: 325), to: Point(x: 220, y: 340), capStyle: .round)
+canvas.drawLine(from: Point(x: 245, y: 325), to: Point(x: 247, y: 340), capStyle: .round)
 
-canvas.drawLine(from: Point(x: 212, y: 344), to: Point(x: 228, y: 341))
-canvas.drawLine(from: Point(x: 240, y: 342), to: Point(x: 255, y: 342))
+canvas.drawLine(from: Point(x: 212, y: 344), to: Point(x: 228, y: 341), capStyle: .round)
+canvas.drawLine(from: Point(x: 240, y: 342), to: Point(x: 255, y: 342), capStyle: .round)
 
-canvas.drawLine(from: Point(x: 212, y: 344), to: Point(x: 215, y: 365))
-canvas.drawLine(from: Point(x: 228, y: 341), to: Point(x: 235, y: 360))
-canvas.drawLine(from: Point(x: 240, y: 342), to: Point(x: 235, y: 360))
-canvas.drawLine(from: Point(x: 255, y: 355), to: Point(x: 255, y: 342))
+canvas.drawLine(from: Point(x: 212, y: 344), to: Point(x: 215, y: 365), capStyle: .round)
+canvas.drawLine(from: Point(x: 228, y: 341), to: Point(x: 235, y: 360), capStyle: .round)
+canvas.drawLine(from: Point(x: 240, y: 342), to: Point(x: 235, y: 360), capStyle: .round)
+canvas.drawLine(from: Point(x: 255, y: 355), to: Point(x: 255, y: 342), capStyle: .round)
 
 
 // draw stumy and face curve
@@ -123,8 +124,8 @@ canvas.drawCurve(from: Point(x: 158, y: 460),
                  showControlPoints: false, capStyle: .round)
 
 //Draw line
-canvas.drawLine(from: Point(x: 160, y: 490), to: Point(x: 170, y: 480))
-canvas.drawLine(from: Point(x: 222, y: 490), to: Point(x: 213, y: 480))
+canvas.drawLine(from: Point(x: 160, y: 490), to: Point(x: 170, y: 480), capStyle: .round)
+canvas.drawLine(from: Point(x: 222, y: 490), to: Point(x: 213, y: 480), capStyle: .round)
 
 //Draw head and bottom right curve
 
@@ -162,8 +163,8 @@ canvas.drawCurve(from: Point(x: 223, y: 450),
 canvas.defaultLineWidth = 4
 
 // Draw face
-canvas.drawLine(from: Point(x: 192, y: 445), to: Point(x: 182, y: 470))
-canvas.drawLine(from: Point(x: 192, y: 445), to: Point(x: 202, y: 470))
+canvas.drawLine(from: Point(x: 192, y: 445), to: Point(x: 182, y: 470), capStyle: .round)
+canvas.drawLine(from: Point(x: 192, y: 445), to: Point(x: 202, y: 470), capStyle: .round)
 
 //Fill in color foe eyes
 canvas.fillColor = gold
@@ -187,10 +188,11 @@ canvas.drawEllipse(at: Point(x: 176, y: 465), width: 9, height: 9)
 canvas.drawEllipse(at: Point(x: 208, y: 465), width: 9, height: 9)
 
 
+canvas.copyToClipboard()
 
-canvas.fillColor = gold
+//canvas.fillColor = gold
 // Draw the Axis with a scale
-canvas.drawAxes(withScale: true, by: 50)
+//canvas.drawAxes(withScale: true, by: 50)
 /*:
  ## Show the Assistant Editor
  Don't see any results?

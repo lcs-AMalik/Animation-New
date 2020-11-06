@@ -34,6 +34,7 @@
 		90860BC2253B37A200612555 /* FourCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90860BC1253B37A200612555 /* FourCorners.swift */; };
 		90860BC625420DA100612555 /* BouncingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90860BC525420DA100612555 /* BouncingCircle.swift */; };
 		9090D8EE2539D3D900E2668E /* MovingSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9090D8ED2539D3D900E2668E /* MovingSquare.swift */; };
+		90D9BD39255591C300454C35 /* LinesFromCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D9BD38255591C300454C35 /* LinesFromCircles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		90860BC1253B37A200612555 /* FourCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCorners.swift; sourceTree = "<group>"; };
 		90860BC525420DA100612555 /* BouncingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncingCircle.swift; sourceTree = "<group>"; };
 		9090D8ED2539D3D900E2668E /* MovingSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingSquare.swift; sourceTree = "<group>"; };
+		90D9BD38255591C300454C35 /* LinesFromCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesFromCircles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				90860BC1253B37A200612555 /* FourCorners.swift */,
 				90860BC525420DA100612555 /* BouncingCircle.swift */,
 				9001AFCE25487F1C00BCD6D8 /* skittlez.swift */,
+				90D9BD38255591C300454C35 /* LinesFromCircles.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				814ADAFB248EB45F00F80486 /* AudioInputSketch.swift in Sources */,
 				814ADAF1248E9F8200F80486 /* AudioAnalyser.swift in Sources */,
 				9001AFCF25487F1C00BCD6D8 /* skittlez.swift in Sources */,
+				90D9BD39255591C300454C35 /* LinesFromCircles.swift in Sources */,
 				814ADAF3248E9FDA00F80486 /* Sketchable.swift in Sources */,
 				814ADAFD248EB56900F80486 /* EmptySketch.swift in Sources */,
 				814ADAFF248EB5E300F80486 /* StaticSketch.swift in Sources */,
