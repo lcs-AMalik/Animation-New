@@ -19,8 +19,11 @@ class LinesFromCircles: NSObject, Sketchable {
     
     
     // Make a small and a large cirlce
-    var small: MovingCircle
-    var large: MovingCircle
+    
+//    var small: MovingCircle
+//    var large: MovingCircle
+    
+    var circles: [MovingCircle] = [] // Empty list (array)
     
     
     // This function runs once
@@ -29,19 +32,22 @@ class LinesFromCircles: NSObject, Sketchable {
         // Create canvas object – specify size
         canvas = Canvas(width: 500, height: 500)
         
-        // set up small and large circle
-        small = MovingCircle(x: Int.random(in: 0...canvas.width),
-                             y: Int.random(in: 0...canvas.height),
-                             dx: 1,
-                             dy: -1,
-                             diameter: 50)
+        //Add circles
+        for _ in stride(from: 1, through: 2, by: 1) {
         
-        large = MovingCircle(x: Int.random(in: 0...canvas.width),
-                             y: Int.random(in: 0...canvas.height),
-                             dx: 1,
-                             dy: -1,
-                             diameter: 20)
-        
+        }
+        for _ in 1...4 {
+            
+            var newCircle = MovingCircle(x: Int.random(in: 0...canvas.width),
+                                         y: Int.random(in: 0...canvas.height),
+                                         dx: 1,
+                                         dy: -1,
+                                         diameter: 200)
+            
+            //Now add the new circle to the list
+            circles.append(newCircle)
+            
+        }
         
         canvas.drawShapesWithBorders = true
         canvas.borderColor = Color.black
@@ -66,14 +72,26 @@ class LinesFromCircles: NSObject, Sketchable {
         canvas.defaultBorderWidth = 1
         
         //    updat each circles position on the canvas
-        small.update(on: canvas)
-        large.update(on: canvas)
+        for i in 0...circles.count - 1 {
+            circles[i].update(on: canvas)
+        }
         
         // Check whether the circles overlap
-        small.drawLinewhenOverLapingWith(other: large, on: canvas)
-        
-        
+        circles[0].drawLinewhenOverLapingWith(other: circles[1],
+                                         on: canvas)
+        circles[0].drawLinewhenOverLapingWith(other: circles[2],
+                                         on: canvas)
+        circles[0].drawLinewhenOverLapingWith(other: circles[3],
+                                         on: canvas)
+        circles[1].drawLinewhenOverLapingWith(other: circles[2],
+                                         on: canvas)
+        circles[1].drawLinewhenOverLapingWith(other: circles[3],
+                                         on: canvas)
+        circles[2].drawLinewhenOverLapingWith(other: circles[3],
+                                         on: canvas)
     }
+    
+    
     
 }
 
