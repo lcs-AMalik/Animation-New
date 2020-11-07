@@ -20,6 +20,11 @@ class MovingCircle {
     var dy: Int
     var diameter: Int
     
+    // Computer property
+    var radius: Int {
+        return self.diameter / 2
+    }
+    
     // 2. Intializer (initialize, or "set up" the properties with a first value)
     
     init(x: Int, y: Int, dx: Int, dy: Int, diameter: Int) {
@@ -75,5 +80,20 @@ class MovingCircle {
         
     }
     
+    func drawLinewhenOverLapingWith(other: MovingCircle,
+                                    on canvas: Canvas) {
+        
+        // Find the disance between the circles
+           let a = Double(self.x - other.x)
+           let b = Double(self.y - other.y)
+           let d = sqrt(a*a + b*b)
+
+           
+           //When the circles overlap, draw a line between them
+           if d < Double (self.radius + other.radius) {
+          canvas.drawLine(from: Point(x: self.x, y: self.y), to: Point(x: other.x, y: other.y))
+               
+           }
+    }
 }
 
