@@ -19,9 +19,7 @@ class LinesFromCircles: NSObject, Sketchable {
     
     
     // Make a small and a large cirlce
-    
-    //    var small: MovingCircle
-    //    var large: MovingCircle
+
     
     var circles: [MovingCircle] = [] // Empty list (array)
     
@@ -55,14 +53,9 @@ class LinesFromCircles: NSObject, Sketchable {
     }
     
     // This function runs repeatedly, forever, to create the animated effect
-    // This function runs repeatedly, forever, to create the animated effect
     
     func draw() {
         
-        //        var int = Int.random(in: 1...500)
-        //        var int2 = Int.random(in: 1...500)
-        
-        //        let rainbow = Color(hue: int2, saturation: int, brightness: int, alpha: int)
         
         
         //        canvas.fillColor = Color.black
@@ -76,19 +69,6 @@ class LinesFromCircles: NSObject, Sketchable {
             circles[i].update(on: canvas)
         }
         
-        // Check whether the circles overlap
-        //        circles[0].drawLinewhenOverLapingWith(other: circles[1],
-        //                                         on: canvas)
-        //        circles[0].drawLinewhenOverLapingWith(other: circles[2],
-        //                                         on: canvas)
-        //        circles[0].drawLinewhenOverLapingWith(other: circles[3],
-        //                                         on: canvas)
-        //        circles[1].drawLinewhenOverLapingWith(other: circles[2],
-        //                                         on: canvas)
-        //        circles[1].drawLinewhenOverLapingWith(other: circles[3],
-        //                                         on: canvas)
-        //        circles[2].drawLinewhenOverLapingWith(other: circles[3],
-        //                                         on: canvas)
         
         for i in stride(from: 0, through: circles.count - 2, by: 1) {
             
