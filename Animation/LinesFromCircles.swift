@@ -20,8 +20,8 @@ class LinesFromCircles: NSObject, Sketchable {
     
     // Make a small and a large cirlce
     
-//    var small: MovingCircle
-//    var large: MovingCircle
+    //    var small: MovingCircle
+    //    var large: MovingCircle
     
     var circles: [MovingCircle] = [] // Empty list (array)
     
@@ -34,15 +34,15 @@ class LinesFromCircles: NSObject, Sketchable {
         
         //Add circles
         for _ in stride(from: 1, through: 2, by: 1) {
-        
+            
         }
-        for _ in 1...4 {
+        for _ in 1...10 {
             
             var newCircle = MovingCircle(x: Int.random(in: 0...canvas.width),
                                          y: Int.random(in: 0...canvas.height),
                                          dx: 1,
                                          dy: -1,
-                                         diameter: 200)
+                                         diameter: 75)
             
             //Now add the new circle to the list
             circles.append(newCircle)
@@ -77,20 +77,32 @@ class LinesFromCircles: NSObject, Sketchable {
         }
         
         // Check whether the circles overlap
-        circles[0].drawLinewhenOverLapingWith(other: circles[1],
-                                         on: canvas)
-        circles[0].drawLinewhenOverLapingWith(other: circles[2],
-                                         on: canvas)
-        circles[0].drawLinewhenOverLapingWith(other: circles[3],
-                                         on: canvas)
-        circles[1].drawLinewhenOverLapingWith(other: circles[2],
-                                         on: canvas)
-        circles[1].drawLinewhenOverLapingWith(other: circles[3],
-                                         on: canvas)
-        circles[2].drawLinewhenOverLapingWith(other: circles[3],
-                                         on: canvas)
+        //        circles[0].drawLinewhenOverLapingWith(other: circles[1],
+        //                                         on: canvas)
+        //        circles[0].drawLinewhenOverLapingWith(other: circles[2],
+        //                                         on: canvas)
+        //        circles[0].drawLinewhenOverLapingWith(other: circles[3],
+        //                                         on: canvas)
+        //        circles[1].drawLinewhenOverLapingWith(other: circles[2],
+        //                                         on: canvas)
+        //        circles[1].drawLinewhenOverLapingWith(other: circles[3],
+        //                                         on: canvas)
+        //        circles[2].drawLinewhenOverLapingWith(other: circles[3],
+        //                                         on: canvas)
+        
+        for i in stride(from: 0, through: circles.count - 2, by: 1) {
+            
+            for j in stride(from: i + 1, through: circles.count - 1, by: 1){
+                
+                circles[i].drawLinewhenOverLapingWith(other: circles[j],
+                                                      on: canvas)
+                
+            }
+            
+            
+        }
+        
     }
-    
     
     
 }
