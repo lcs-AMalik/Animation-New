@@ -19,6 +19,7 @@ class MovingCircle {
     var dx: Int
     var dy: Int
     var diameter: Int
+    var drawCircle: Bool
     
     // Computer property
     var radius: Int {
@@ -27,7 +28,7 @@ class MovingCircle {
     
     // 2. Intializer (initialize, or "set up" the properties with a first value)
     
-    init(x: Int, y: Int, dx: Int, dy: Int, diameter: Int) {
+    init(x: Int, y: Int, dx: Int, dy: Int, diameter: Int, drawCircle: Bool) {
         
         // "self" refers to the properties from This class
         // light blue refers to property
@@ -38,12 +39,12 @@ class MovingCircle {
         self.dx = dx
         self.dy = dy
         self.diameter = diameter
-        
+        self.drawCircle = drawCircle
     }
     
     // 3.  Methods (make things happen)
     func update(on canvas: Canvas) {
-    
+        
         // Move the circles
         y += dy
         x += dx
@@ -52,31 +53,36 @@ class MovingCircle {
         canvas.drawShapesWithFill = false
         canvas.fillColor = Color.white
         
-            // Draw the circle
-        canvas.drawEllipse(at: Point(x: x, y: y),
-                           width: diameter,
-                           height: diameter)
+        // Draw the circle
+        if drawCircle == true {
+            canvas.drawEllipse(at: Point(x: x, y: y),
+                               width: diameter,
+                               height: diameter)
+        }
+        
+        
+        
         
         // Bounce first cirlcle at edges
         
         if x >= canvas.width {
-
+            
             dx = -1
-
+            
         } else if x <= 0 {
-
+            
             dx = Int.random(in: -5...50)
-
+            
         }  else if y >= canvas.height {
-
-                dy = -1
-
+            
+            dy = -1
+            
         }   else if y <= 0 {
-
+            
             dy = +1
-
+            
         }
-
+        
         
     }
     
@@ -84,16 +90,22 @@ class MovingCircle {
                                     on canvas: Canvas) {
         
         // Find the disance between the circles
-           let a = Double(self.x - other.x)
-           let b = Double(self.y - other.y)
-           let d = sqrt(a*a + b*b)
-
-           
-           //When the circles overlap, draw a line between them
-           if d < Double (self.radius + other.radius) {
-          canvas.drawLine(from: Point(x: self.x, y: self.y), to: Point(x: other.x, y: other.y))
-               
-           }
+        let a = Double(self.x - other.x)
+        let b = Double(self.y - other.y)
+        let d = sqrt(a*a + b*b)
+        
+       //map the distaNCE BETWEEN CIRCLES TO ALPHA
+        let alpha = map(value: d, fromLower: 50, fromUpper: Double(self.radius + other.radius), toLower: 0, toUpper: 50)
+        
+        // set the canvas line color to reflect the alpha value
+        canvas.lineColor = Color(hue: 0, saturation: 100, brightness: 0, alpha: Int(alpha))
+        
+        
+        //When the circles overlap, draw a line between them
+        if d < Double (self.radius + other.radius) {
+            canvas.drawLine(from: Point(x: self.x, y: self.y), to: Point(x: other.x, y: other.y))
+            
+        }
     }
 }
 

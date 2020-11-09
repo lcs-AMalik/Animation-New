@@ -34,7 +34,7 @@ class LinesFromCircles: NSObject, Sketchable {
         for _ in stride(from: 1, through: 2, by: 1) {
             
         }
-        for _ in 1...10 {
+        for _ in 1...45 {
             
            // Randomly pick horizontal direction
             var dx = 1
@@ -49,11 +49,12 @@ class LinesFromCircles: NSObject, Sketchable {
             
             
             // create new circle
-            var newCircle = MovingCircle(x: Int.random(in: 0...canvas.width),
+            let newCircle = MovingCircle(x: Int.random(in: 0...canvas.width),
                                          y: Int.random(in: 0...canvas.height),
                                          dx: dx,
                                          dy: dy,
-                                         diameter: 75)
+                                         diameter: 150,
+                                         drawCircle: false)
             
             //Now add the new circle to the list
             circles.append(newCircle)
