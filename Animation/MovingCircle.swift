@@ -94,8 +94,8 @@ class MovingCircle {
         let b = Double(self.y - other.y)
         let d = sqrt(a*a + b*b)
         
-       //map the distaNCE BETWEEN CIRCLES TO ALPHA
-        let alpha = map(value: d, fromLower: 50, fromUpper: Double(self.radius + other.radius), toLower: 0, toUpper: 50)
+       // map the distance between circles to alpha
+        let alpha = map(value: d, fromLower: 50, fromUpper: Double(self.radius + other.radius), toLower: 0, toUpper: 360)
         
         // set the canvas line color to reflect the alpha value
         canvas.lineColor = Color(hue: 0, saturation: 100, brightness: 0, alpha: Int(alpha))

@@ -20,7 +20,7 @@ class Sketch: NSObject {
   //var currentDrawing = FourCorners()
 //    var currentDrawing = BouncingCircle()
 //    var currentDrawing = skittlez()
-    var currentDrawing = LinesFromCircles()
-
+//    var currentDrawing = LinesFromCircles()
+ var currentDrawing = Spiral()
     
 }

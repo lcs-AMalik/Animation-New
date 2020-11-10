@@ -35,6 +35,8 @@
 		9090D8EE2539D3D900E2668E /* MovingSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9090D8ED2539D3D900E2668E /* MovingSquare.swift */; };
 		90A330EF25559BA200A3BF3F /* MovingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A330EE25559BA200A3BF3F /* MovingCircle.swift */; };
 		90D9BD39255591C300454C35 /* LinesFromCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D9BD38255591C300454C35 /* LinesFromCircles.swift */; };
+		90F6E600255AF785007E6CC9 /* Spiral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6E5FF255AF785007E6CC9 /* Spiral.swift */; };
+		90F6E604255AFAE5007E6CC9 /* IndividualSpiral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6E603255AFAE5007E6CC9 /* IndividualSpiral.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +128,8 @@
 		9090D8ED2539D3D900E2668E /* MovingSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingSquare.swift; sourceTree = "<group>"; };
 		90A330EE25559BA200A3BF3F /* MovingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingCircle.swift; sourceTree = "<group>"; };
 		90D9BD38255591C300454C35 /* LinesFromCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesFromCircles.swift; sourceTree = "<group>"; };
+		90F6E5FF255AF785007E6CC9 /* Spiral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spiral.swift; sourceTree = "<group>"; };
+		90F6E603255AFAE5007E6CC9 /* IndividualSpiral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualSpiral.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,8 @@
 				9001AFCE25487F1C00BCD6D8 /* skittlez.swift */,
 				90D9BD38255591C300454C35 /* LinesFromCircles.swift */,
 				90A330EE25559BA200A3BF3F /* MovingCircle.swift */,
+				90F6E5FF255AF785007E6CC9 /* Spiral.swift */,
+				90F6E603255AFAE5007E6CC9 /* IndividualSpiral.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -509,8 +515,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F6E604255AFAE5007E6CC9 /* IndividualSpiral.swift in Sources */,
 				90A330EF25559BA200A3BF3F /* MovingCircle.swift in Sources */,
 				81064A0C1C130A10007ED524 /* ViewController.swift in Sources */,
+				90F6E600255AF785007E6CC9 /* Spiral.swift in Sources */,
 				81064A1C1C132DA2007ED524 /* Sketch.swift in Sources */,
 				81064A0A1C130A10007ED524 /* AppDelegate.swift in Sources */,
 				814ADAF5248EAB6A00F80486 /* TurtleSketch.swift in Sources */,

@@ -34,7 +34,7 @@ class LinesFromCircles: NSObject, Sketchable {
         for _ in stride(from: 1, through: 2, by: 1) {
             
         }
-        for _ in 1...45 {
+        for _ in 1...120 {
             
            // Randomly pick horizontal direction
             var dx = 1
