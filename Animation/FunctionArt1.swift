@@ -63,11 +63,17 @@ class FunctionArt1: NSObject, Sketchable {
         // Set the origin to be the middle of the canvas
         canvas.translate(to: Point(x: canvas.width / 2, y: canvas.height / 2))
 
-        // Update the position of that one spiral
-        for functions in functions {
-            functions.update(on: canvas,
-                             usingInputValue: canvas.frameCount)
+       // Draw the intire list of functions all at once
+        for x in 0...canvas.width {
+            
+            // Update the position of that one spiral
+            for functions in functions {
+                functions.update(on: canvas,
+                                 usingInputValue: x)
+
         }
+        
+                }
 
     
     }

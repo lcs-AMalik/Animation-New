@@ -72,7 +72,7 @@ class MathFunction {
         if x > 0 && x < canvas.width {
 
             // Determine the next X position
-            let nextX : CGFloat = CGFloat(canvas.frameCount - canvas.width / 2)
+            let nextX : CGFloat = CGFloat(x - canvas.width / 2)
 
             // Determine the next Y position
             var nextY : CGFloat = 0.0
@@ -106,7 +106,7 @@ class MathFunction {
             canvas.lineColor = Color(hue: 190,
                                      saturation: 80,
                                      brightness: 90,
-                                     alpha: 5)
+                                     alpha: 50)
             
             
             // Draw a line from the last point to the next point
