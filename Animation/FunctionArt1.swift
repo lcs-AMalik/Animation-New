@@ -24,15 +24,16 @@ class FunctionArt1: NSObject, Sketchable {
         // Create canvas object – specify size
         canvas = Canvas(width: 500, height: 500)
              
-        // Initialize many spirals
-        for i in 1...5 {
+        // Initialize many functions
+        for i in 1...40 {
             
             // Create the functions
-            let newFunction = MathFunction(a: 1.0,
-                                           k: 3.0,
-                                           d: CGFloat(i) * 25,
+            let newFunction = MathFunction(a: 50.0,
+                                           k: 1.0,
+                                           d: CGFloat(i) * 25 - 200,
                                            c: 0,
-                                           canvas: canvas)
+                                           canvas: canvas,
+                                           type: .slide)
             // add it to the list
             functions.append(newFunction)
             
@@ -48,14 +49,15 @@ class FunctionArt1: NSObject, Sketchable {
         // What frame are we on?
 //        print(canvas.frameCount)
         
-        canvas.defaultLineWidth = 1
+        canvas.defaultLineWidth = 5
         
         // Set the origin to be the middle of the canvas
         canvas.translate(to: Point(x: canvas.width / 2, y: canvas.height / 2))
 
         // Update the position of that one spiral
         for functions in functions {
-            functions.update(on: canvas)
+            functions.update(on: canvas,
+                             usingInputValue: canvas.frameCount)
         }
 
     
