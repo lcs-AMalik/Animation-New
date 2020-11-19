@@ -40,7 +40,7 @@ class FunctionArt1: NSObject, Sketchable {
         }
         
         // Speed
-        canvas.framesPerSecond = 60
+        canvas.framesPerSecond = 1
     }
 
     // This function runs repeatedly, forever, to create the animated effect
@@ -51,7 +51,7 @@ class FunctionArt1: NSObject, Sketchable {
         canvas.fillColor = Color(hue: 224,
                                  saturation: 0,
                                  brightness: 100,
-                                 alpha: 100)
+                                 alpha: 20)
         
         canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.height)
 
@@ -63,11 +63,17 @@ class FunctionArt1: NSObject, Sketchable {
         // Set the origin to be the middle of the canvas
         canvas.translate(to: Point(x: canvas.width / 2, y: canvas.height / 2))
 
+        // Randomly change the verticle position
+        let newC = Int.random(in: -150...150)
+        
        // Draw the intire list of functions all at once
         for x in 0...canvas.width {
             
             // Update the position of that one spiral
             for functions in functions {
+                
+                functions.c = CGFloat(newC)
+                
                 functions.update(on: canvas,
                                  usingInputValue: x)
 

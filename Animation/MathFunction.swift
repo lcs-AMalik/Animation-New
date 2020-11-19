@@ -36,7 +36,7 @@ class MathFunction {
     var a: CGFloat // vertical stretch / compression / reflection
     var k: CGFloat // Horizontal stretch / compression / reflection
     var d: CGFloat // vertical shift
-    var c: CGFloat // vertical shift
+    var c: CGFloat // Horizontal shift
     var type: FunctionType // Tell us what shape/ math function to use
 
     // 2. Initializer
