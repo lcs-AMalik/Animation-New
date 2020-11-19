@@ -45,6 +45,15 @@ class FunctionArt1: NSObject, Sketchable {
 
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
+        
+        // Clear the canvas
+        //Opaque white, for now
+        canvas.fillColor = Color(hue: 224,
+                                 saturation: 0,
+                                 brightness: 100,
+                                 alpha: 100)
+        
+        canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.height)
 
         // What frame are we on?
 //        print(canvas.frameCount)
