@@ -67,6 +67,13 @@ class MathFunction {
     //    Here we describe what behaviour we want to have happen.
     // Update (or draw) the position of this function
     func update(on canvas: Canvas, usingInputValue x: Int) {
+        
+        // Make sure each re draw of all functions begins off-screen
+        if x == 0 {
+            // I want every function to begin off the left sid eof the canvas
+            self.lastPoint = Point(x: -1 * canvas.width / 2 - 5, y: 0)
+        }
+        
       
         // Start drawing after the first frame
         if x > 0 && x < canvas.width {
@@ -106,7 +113,7 @@ class MathFunction {
             canvas.lineColor = Color(hue: 190,
                                      saturation: 80,
                                      brightness: 90,
-                                     alpha: 50)
+                                     alpha: 30)
             
             
             // Draw a line from the last point to the next point
