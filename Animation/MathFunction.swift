@@ -38,6 +38,7 @@ class MathFunction {
     var d: CGFloat // vertical shift
     var c: CGFloat // Horizontal shift
     var type: FunctionType // Tell us what shape/ math function to use
+    var delayInSeconds: Int // How much of a delay to have before the animation begins
 
     // 2. Initializer
     //
@@ -48,7 +49,8 @@ class MathFunction {
          d: CGFloat,
          c: CGFloat,
          canvas: Canvas,
-         type: FunctionType) {
+         type: FunctionType,
+         delayInSeconds: Int = 0) {
         
         // I want every function to begin off the left sid eof the canvas
         self.lastPoint = Point(x: -1 * canvas.width / 2 - 5, y: 0)
@@ -59,7 +61,7 @@ class MathFunction {
         self.d = d
         self.c = c
         self.type = type
-        
+        self.delayInSeconds = delayInSeconds
     }
     
     // 3. Methods
@@ -68,62 +70,69 @@ class MathFunction {
     // Update (or draw) the position of this function
     func update(on canvas: Canvas, usingInputValue x: Int) {
         
-        // Make sure each re draw of all functions begins off-screen
-        if x == 0 {
-            // I want every function to begin off the left sid eof the canvas
-            self.lastPoint = Point(x: -1 * canvas.width / 2 - 5, y: 0)
-        }
+        // Only draw on the canvas after the delay in seconds has been reaches
+        if canvas.frameCount > delayInSeconds * canvas.framesPerSecond {
         
-      
-        // Start drawing after the first frame
-        if x > 0 && x < canvas.width {
-
-            // Determine the next X position
-            let nextX : CGFloat = CGFloat(x - canvas.width / 2)
-
-            // Determine the next Y position
-            var nextY : CGFloat = 0.0
+            // Make sure each re draw of all functions begins off-screen
+            if x == 0 {
+                // I want every function to begin off the left sid eof the canvas
+                self.lastPoint = Point(x: -1 * canvas.width / 2 - 5, y: 0)
+            }
             
-            // set y using a quadratic func
-            switch type {
-            case .linear:
-                nextY = a * ((nextX - d) / k) + c
-            case .quadratic:
-                nextY = a * pow((nextX - d) / k, 2.0) + c
-            case .cubic:
-                nextY = a * pow((nextX - d) / k, 3.0) + c
-            case .squareRoot:
-                nextY = a * sqrt((nextX - d) / k) + c
-            case .absoluteValue:
-                nextY = a * abs((nextX - d) / k) + c
-            case .exponential:
-                nextY = a * exp((nextX - d) / k) + c
-            case .reciprocal:
-                nextY = a * 1.0/((nextX - d) / k) + c
-            case .slide:
-                nextY = a * 120.4/((nextX - d) / k) + c
+          
+            // Start drawing after the first frame
+            if x > 0 && x < canvas.width {
+
+                // Determine the next X position
+                let nextX : CGFloat = CGFloat(x - canvas.width / 2)
+
+                // Determine the next Y position
+                var nextY : CGFloat = 0.0
+                
+                // set y using a quadratic func
+                switch type {
+                case .linear:
+                    nextY = a * ((nextX - d) / k) + c
+                case .quadratic:
+                    nextY = a * pow((nextX - d) / k, 2.0) + c
+                case .cubic:
+                    nextY = a * pow((nextX - d) / k, 3.0) + c
+                case .squareRoot:
+                    nextY = a * sqrt((nextX - d) / k) + c
+                case .absoluteValue:
+                    nextY = a * abs((nextX - d) / k) + c
+                case .exponential:
+                    nextY = a * exp((nextX - d) / k) + c
+                case .reciprocal:
+                    nextY = a * 1.0/((nextX - d) / k) + c
+                case .slide:
+                    nextY = a * 120.4/((nextX - d) / k) + c
+
+                }
+            
+                // Set the next point
+                let nextPoint = Point(x: nextX, y: nextY)
+    //            print(nextPoint)
+                
+                // Set the line color
+                canvas.lineColor = Color(hue: 190,
+                                         saturation: 80,
+                                         brightness: 90,
+                                         alpha: 30)
+                
+                
+                // Draw a line from the last point to the next point
+                canvas.drawLine(from: lastPoint, to: nextPoint)
+                
+
+                // Set the "new" last point, now that the line is drawn
+                lastPoint = nextPoint
 
             }
-        
-            // Set the next point
-            let nextPoint = Point(x: nextX, y: nextY)
-//            print(nextPoint)
+           
             
-            // Set the line color
-            canvas.lineColor = Color(hue: 190,
-                                     saturation: 80,
-                                     brightness: 90,
-                                     alpha: 30)
-            
-            
-            // Draw a line from the last point to the next point
-            canvas.drawLine(from: lastPoint, to: nextPoint)
-            
-
-            // Set the "new" last point, now that the line is drawn
-            lastPoint = nextPoint
-
         }
+        
         
     }
     

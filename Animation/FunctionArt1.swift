@@ -40,7 +40,7 @@ class FunctionArt1: NSObject, Sketchable {
         }
         
         // Speed
-        canvas.framesPerSecond = 1
+        canvas.framesPerSecond = 30
     }
 
     // This function runs repeatedly, forever, to create the animated effect
@@ -72,7 +72,10 @@ class FunctionArt1: NSObject, Sketchable {
             // Update the position of that one spiral
             for functions in functions {
                 
-                functions.c = CGFloat(newC)
+                // functions.c = CGFloat(newC)
+                
+                // Gradualy chnage the verticle stretch/ compression
+                functions.a = 200.0 * sin(Degrees(canvas.frameCount).asRadians() / 0.5)
                 
                 functions.update(on: canvas,
                                  usingInputValue: x)
