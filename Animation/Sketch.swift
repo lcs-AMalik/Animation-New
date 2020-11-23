@@ -13,15 +13,19 @@ class Sketch: NSObject {
     // To try out other included sketches:
     // 1. Comment out the code on line 11.
     // 2. Uncomment one of the lines below.
+    
 //    var currentDrawing = TurtleSketch()
-  //  var currentDrawing = AudioInputSketch()
+//    var currentDrawing = AudioInputSketch()
 //    var currentDrawing = StaticSketch()
-    // var currentDrawing = MovingSquare()
-  //var currentDrawing = FourCorners()
+//    var currentDrawing = MovingSquare()
+//    var currentDrawing = FourCorners()
 //    var currentDrawing = BouncingCircle()
 //    var currentDrawing = skittlez()
 //    var currentDrawing = LinesFromCircles()
-// var currentDrawing = Spiral()
-    var currentDrawing = FunctionArt1()
+//    var currentDrawing = Spiral()
+//    var currentDrawing = FunctionArt1()
+//    var currentDrawing = FunctionArt2()
+//    var currentDrawing = MathFunctionArt()
+      var currentDrawing = FunctionArt3()
 
 }

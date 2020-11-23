@@ -19,7 +19,13 @@ enum FunctionType {
     case absoluteValue
     case exponential
     case reciprocal
-    case slide
+    case sine
+}
+
+// Shape type
+enum ShapeType {
+    case none
+    case star
 }
 
 // Define a class that creates a mathematical function
@@ -39,7 +45,7 @@ class MathFunction {
     var c: CGFloat // Horizontal shift
     var type: FunctionType // Tell us what shape/ math function to use
     var delayInSeconds: Int // How much of a delay to have before the animation begins
-
+    var shapeType: ShapeType // What shape to draw along the path, if any
     // 2. Initializer
     //
     //    An initializer has one job: give each property an initial value
@@ -50,7 +56,8 @@ class MathFunction {
          c: CGFloat,
          canvas: Canvas,
          type: FunctionType,
-         delayInSeconds: Int = 0) {
+         delayInSeconds: Int = 0,
+         shapeType: ShapeType = .none) {
         
         // I want every function to begin off the left sid eof the canvas
         self.lastPoint = Point(x: -1 * canvas.width / 2 - 5, y: 0)
@@ -62,6 +69,7 @@ class MathFunction {
         self.c = c
         self.type = type
         self.delayInSeconds = delayInSeconds
+        self.shapeType = shapeType
     }
     
     // 3. Methods
@@ -105,8 +113,8 @@ class MathFunction {
                     nextY = a * exp((nextX - d) / k) + c
                 case .reciprocal:
                     nextY = a * 1.0/((nextX - d) / k) + c
-                case .slide:
-                    nextY = a * 120.4/((nextX - d) / k) + c
+                case .sine:
+                    nextY = a * sin((nextX.asRadians() - d) / k) + c
 
                 }
             
@@ -123,6 +131,33 @@ class MathFunction {
                 
                 // Draw a line from the last point to the next point
                 canvas.drawLine(from: lastPoint, to: nextPoint)
+                
+                // Whether to draw a shape or not
+                if shapeType == .none {
+                    
+                    // Draw a line from the last point to the next point
+                    canvas.drawLine(from: lastPoint, to: nextPoint)
+                    
+                } else if shapeType == .star {
+                    
+                    // Yellow color
+                    canvas.fillColor = Color(hue: 56, saturation: 70, brightness: 90, alpha: 80)
+                    canvas.drawShapesWithFill = true
+                    
+                    var star: [Point] = []
+                    star.append(Point(x: nextX + 0, y: nextY - 50))
+                    star.append(Point(x: nextX + 14, y: nextY - 20))
+                    star.append(Point(x: nextX + 47, y: nextY - 15))
+                    star.append(Point(x: nextX + 23, y: nextY + 7))
+                    star.append(Point(x: nextX + 29, y: nextY + 40))
+                    star.append(Point(x: nextX + 0, y: nextY + 25))
+                    star.append(Point(x: nextX - 29, y: nextY + 40))
+                    star.append(Point(x: nextX - 23, y: nextY + 7))
+                    star.append(Point(x: nextX - 47, y: nextY - 15))
+                    star.append(Point(x: nextX - 14, y: nextY - 20))
+                    canvas.drawCustomShape(with: star)
+                    
+                }
                 
 
                 // Set the "new" last point, now that the line is drawn
