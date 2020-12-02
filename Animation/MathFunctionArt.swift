@@ -18,7 +18,7 @@ class MathFunctionArt: NSObject, Sketchable {
     // This is now a list, or an array, of functions
     var redBand: [MathFunction] = []    // empty list
     var smallerRedBand: [MathFunction] = []    // empty list
-    
+
     // This function runs once
     override init() {
         
@@ -37,7 +37,7 @@ class MathFunctionArt: NSObject, Sketchable {
                                            c: -100,
                                            canvas: canvas,
                                            type: .squareRoot,
-                                           delayInSeconds: -5)
+                                           delayInSeconds: 0)
             
             // add it to the list
             redBand.append(newFunction)
@@ -54,7 +54,7 @@ class MathFunctionArt: NSObject, Sketchable {
                                            c: 230,
                                            canvas: canvas,
                                            type: .cubic,
-                                           delayInSeconds: -10)
+                                           delayInSeconds: 0)
             
             // add it to the list
             smallerRedBand.append(newFunction)
@@ -62,7 +62,7 @@ class MathFunctionArt: NSObject, Sketchable {
         }
         
         // Speed
-        canvas.framesPerSecond = 30
+        canvas.framesPerSecond = 60
     }
     
     // This function runs repeatedly, forever, to create the animated effect
@@ -94,7 +94,7 @@ class MathFunctionArt: NSObject, Sketchable {
                 // functions.c = CGFloat(newC)
                 
                 // Gradualy chnage the verticle stretch/ compression
-                functions.a = 40.0 * sin(Degrees(canvas.frameCount).asRadians() / 0.5)
+                functions.a = 20.0 * sin(Degrees(canvas.frameCount).asRadians() / 0.5)
                 
                 functions.update(on: canvas,
                                  usingInputValue: x)

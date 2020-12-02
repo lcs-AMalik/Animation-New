@@ -34,8 +34,7 @@ class FunctionArt2: NSObject, Sketchable {
                                            d: CGFloat(i) * 25 - 200,
                                            c: -100,
                                            canvas: canvas,
-                                           type: .sine,
-                                           delayInSeconds: 0)
+                                           type: .sine)
             
             // add it to the list
             redBand.append(newFunction)
@@ -51,8 +50,7 @@ class FunctionArt2: NSObject, Sketchable {
                                            d: CGFloat(i) * 25 - 200,
                                            c: 200,
                                            canvas: canvas,
-                                           type: .sine,
-                                           delayInSeconds: 5)
+                                           type: .sine)
             
             // add it to the list
             smallerRedBand.append(newFunction)

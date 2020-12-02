@@ -19,13 +19,18 @@ class Sketch: NSObject {
 //    var currentDrawing = StaticSketch()
 //    var currentDrawing = MovingSquare()
 //    var currentDrawing = FourCorners()
-//    var currentDrawing = BouncingCircle()
 //    var currentDrawing = skittlez()
 //    var currentDrawing = LinesFromCircles()
 //    var currentDrawing = Spiral()
 //    var currentDrawing = FunctionArt1()
 //    var currentDrawing = FunctionArt2()
 //    var currentDrawing = MathFunctionArt()
-      var currentDrawing = FunctionArt3()
+//    var currentDrawing = FunctionArt3()
+//    var currentDrawing = LinesFromCircles2()
+//    var currentDrawing = LinesFromCircles3()
+   var currentDrawing = LinesFromCircles4()
+
+
+
 
 }

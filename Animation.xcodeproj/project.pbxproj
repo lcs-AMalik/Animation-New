@@ -34,6 +34,9 @@
 		90860BC2253B37A200612555 /* FourCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90860BC1253B37A200612555 /* FourCorners.swift */; };
 		9090D8EE2539D3D900E2668E /* MovingSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9090D8ED2539D3D900E2668E /* MovingSquare.swift */; };
 		90A330EF25559BA200A3BF3F /* MovingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A330EE25559BA200A3BF3F /* MovingCircle.swift */; };
+		90AFEC9A256D6D3300FA317D /* LinesFromCircles2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFEC99256D6D3300FA317D /* LinesFromCircles2.swift */; };
+		90AFEC9D256D761500FA317D /* LinesFromCircle3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFEC9C256D761500FA317D /* LinesFromCircle3.swift */; };
+		90AFECA0256D7A1700FA317D /* LinesFromCircle4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFEC9F256D7A1700FA317D /* LinesFromCircle4.swift */; };
 		90D9BD39255591C300454C35 /* LinesFromCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D9BD38255591C300454C35 /* LinesFromCircles.swift */; };
 		90F5A2C925642F8400063D0C /* MathFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F5A2C825642F8400063D0C /* MathFunction.swift */; };
 		90F5A2CC2564355400063D0C /* FunctionArt1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F5A2CB2564355400063D0C /* FunctionArt1.swift */; };
@@ -132,6 +135,9 @@
 		90860BC1253B37A200612555 /* FourCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCorners.swift; sourceTree = "<group>"; };
 		9090D8ED2539D3D900E2668E /* MovingSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingSquare.swift; sourceTree = "<group>"; };
 		90A330EE25559BA200A3BF3F /* MovingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingCircle.swift; sourceTree = "<group>"; };
+		90AFEC99256D6D3300FA317D /* LinesFromCircles2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesFromCircles2.swift; sourceTree = "<group>"; };
+		90AFEC9C256D761500FA317D /* LinesFromCircle3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesFromCircle3.swift; sourceTree = "<group>"; };
+		90AFEC9F256D7A1700FA317D /* LinesFromCircle4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesFromCircle4.swift; sourceTree = "<group>"; };
 		90D9BD38255591C300454C35 /* LinesFromCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesFromCircles.swift; sourceTree = "<group>"; };
 		90F5A2C825642F8400063D0C /* MathFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFunction.swift; sourceTree = "<group>"; };
 		90F5A2CB2564355400063D0C /* FunctionArt1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionArt1.swift; sourceTree = "<group>"; };
@@ -208,6 +214,9 @@
 				90F5A2CE2568026F00063D0C /* FunctionArt2.swift */,
 				90F5A2DC256C03D500063D0C /* FunctionArt3.swift */,
 				90F5A2D8256BFC8400063D0C /* MathFunctionArt.swift */,
+				90AFEC99256D6D3300FA317D /* LinesFromCircles2.swift */,
+				90AFEC9C256D761500FA317D /* LinesFromCircle3.swift */,
+				90AFEC9F256D7A1700FA317D /* LinesFromCircle4.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -543,10 +552,13 @@
 				90F5A2CC2564355400063D0C /* FunctionArt1.swift in Sources */,
 				90F5A2DD256C03D500063D0C /* FunctionArt3.swift in Sources */,
 				814ADAF9248EB34900F80486 /* BasicSketch.swift in Sources */,
+				90AFEC9D256D761500FA317D /* LinesFromCircle3.swift in Sources */,
+				90AFECA0256D7A1700FA317D /* LinesFromCircle4.swift in Sources */,
 				90860BC2253B37A200612555 /* FourCorners.swift in Sources */,
 				814ADAFB248EB45F00F80486 /* AudioInputSketch.swift in Sources */,
 				814ADAF1248E9F8200F80486 /* AudioAnalyser.swift in Sources */,
 				9001AFCF25487F1C00BCD6D8 /* skittlez.swift in Sources */,
+				90AFEC9A256D6D3300FA317D /* LinesFromCircles2.swift in Sources */,
 				90F5A2D9256BFC8400063D0C /* MathFunctionArt.swift in Sources */,
 				90D9BD39255591C300454C35 /* LinesFromCircles.swift in Sources */,
 				814ADAF3248E9FDA00F80486 /* Sketchable.swift in Sources */,

@@ -11,6 +11,7 @@ import CanvasGraphics
 
 // Enumeration
 // Define a list of choices that you want the user of your code to select from
+var int = Int.random(in: 1...360)
 enum FunctionType {
     case linear
     case quadratic
@@ -141,7 +142,7 @@ class MathFunction {
                 } else if shapeType == .star {
                     
                     // Yellow color
-                    canvas.fillColor = Color(hue: 56, saturation: 70, brightness: 90, alpha: 80)
+                    canvas.fillColor = Color(hue: int, saturation: 70, brightness: 90, alpha: 80)
                     canvas.drawShapesWithFill = true
                     
                     var star: [Point] = []

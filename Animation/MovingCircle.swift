@@ -20,7 +20,9 @@ class MovingCircle {
     var dy: Int
     var diameter: Int
     var drawCircle: Bool
-    
+    var int1 = Int.random (in: 1...360)
+    var int2 = Int.random (in: 1...100)
+
     // Computer property
     var radius: Int {
         return self.diameter / 2
@@ -67,19 +69,19 @@ class MovingCircle {
         
         if x >= canvas.width {
             
-            dx = -1
+            dx = -5
             
         } else if x <= 0 {
             
-            dx = Int.random(in: -5...50)
-            
+            dx = 5
+        
         }  else if y >= canvas.height {
             
-            dy = -1
+            dy = -5
             
         }   else if y <= 0 {
             
-            dy = +1
+            dy = 5
             
         }
         
@@ -98,8 +100,8 @@ class MovingCircle {
         let alpha = map(value: d, fromLower: 50, fromUpper: Double(self.radius + other.radius), toLower: 0, toUpper: 360)
         
         // set the canvas line color to reflect the alpha value
-        canvas.lineColor = Color(hue: 0, saturation: 100, brightness: 0, alpha: Int(alpha))
-        
+        canvas.lineColor = Color(hue: int1, saturation: int2, brightness: 100, alpha: 100)
+        canvas.defaultLineWidth = 5
         
         //When the circles overlap, draw a line between them
         if d < Double (self.radius + other.radius) {
